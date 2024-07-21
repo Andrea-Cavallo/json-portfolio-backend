@@ -48,15 +48,13 @@ Open index.html in your preferred web browser.
 
 ## Demo
 Here are some screenshots of the website:
+
 ![Get User](img/get.png)
 
-then --->
 ![Output](img/output.png)
 
 
-
 ## License
-
 This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
