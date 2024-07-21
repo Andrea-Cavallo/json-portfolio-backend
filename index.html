@@ -5,42 +5,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrea Cavallo</title>
-    
     <!-- SEO Meta Tags -->
     <meta name="description" content="Software Engineering Portfolio" />
     <meta name="author" content="Andrea Cavallo" />
     <meta name="robots" content="index, follow" />
-    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Andrea Cavallo" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:description" content="Software Engineering" />
-    <meta property="og:url" content="https://github.com/Andrea-Cavallo?tab=repositories" />
+    <meta property="og:url" content="https://github.com/Andrea-Cavallo/json-portfolio-backend.git" />
     <meta property="og:site_name" content="Andrea Cavallo" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/67713825?v=4" />
-    
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="Andrea Cavallo" />
     <meta property="twitter:description" content="Software Developer Portfolio" />
     <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/67713825?v=4" />
-    
     <!-- Canonical Link -->
-    <link rel="canonical" href="https://github.com/Andrea-Cavallo?tab=repositories" />
-    
+    <link rel="canonical" href="https://github.com/Andrea-Cavallo/json-portfolio-backend.git" />
     <!-- Favicon -->
     <link rel="icon" href="https://andrea_cavallo.github.io/portfolio/favicon.ico" type="image/x-icon" />
-    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-    
     <!-- Font Import -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" />
-    
     <!-- CSS Reset -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1/modern-normalize.min.css" />
-    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
       {
@@ -52,122 +43,8 @@
         "url": "https://github.com/Andrea-Cavallo?tab=repositories"
       }
     </script>
-    <style>
-
-  
-    body {
-      background-color: #1e1e1e;
-      color: #dcdcdc;
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-    }
-
-    main {
-      max-width: 90%;
-      margin: 20px;
-      padding: 20px;
-      background-color: #1e1e1e;
-      border: 1px solid #3c3c3c;
-      border-radius: 8px;
-      overflow-x: auto;
-      display: none; /* Initially hidden */
-    }
-
-    #json {
-      white-space: post;
-      line-height: 1.0;
-      font-size: 15px;
-      color: #dcdcdc;
-    }
-
-    .key {
-      color: #9cdcfe;
-    }
-
-    .value {
-      color: #ce9178;
-    }
-
-    a.value {
-      color: #569cd6;
-      text-decoration: none;
-    }
-
-    a.value:hover {
-      text-decoration: underline;
-    }
-
-    .bracket {
-      color: #d4d4d4;
-    }
-
-    .indent {
-      margin-left: 35px;
-    }
-
-    .indent1 {
-      margin-left: 30px;
-    }
-
-    .nested-indent {
-      margin-left: 130px;
-    }
-
-    #typed {
-      color: #ce9178;
-    }
-
-    #strings span {
-      display: none;
-    }
-
-
-    #request-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #333;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      width: 80%;
-      max-width: 600px;
-    }
-
-    #url {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 10px;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
-      background-color: #1e1e1e;
-      color: #dcdcdc;
-      border: 1px solid #3c3c3c;
-      border-radius: 4px;
-    }
-
-    #send-button {
-      padding: 12px 24px;
-      font-size: 16px;
-      cursor: pointer;
-      background-color: #569cd6;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    #send-button:hover {
-      background-color: #417bb8;
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
 <body>
@@ -175,6 +52,7 @@
         <input type="text" id="url" value="http://localhost:8080/users/AndreaCavallo" readonly>
         <button id="send-button">Send</button>
       </div>
+
   <main class="container">
     <div id="json">
         <div class="indent1">{<br><br>"<span class="key">Output</span>": {<div class="indent">
@@ -194,24 +72,11 @@
         <span>Software Developer with a background in Mechanical Engineering.</span>
         <span>Passion for Java, Microservices, and Integration Solutions.</span>
         <span>Dedicated and results-oriented Software Developer.</span>
-
       </div>
   </main>
-  <script>
-    var typed = new Typed("#typed", {
-      stringsElement: "#strings",
-      backSpeed: 10,
-      typeSpeed: 30,
-      backDelay: 1000,
-      loop: true,
-      smartBackspace: true,
-    });
 
-    document.getElementById('send-button').addEventListener('click', function() {
-      document.getElementById('request-container').style.display = 'none';
-      document.querySelector('main').style.display = 'block';
-    });
-  </script>
+  <script src="scripts/script.js"></script>
+ 
 </body>
 
 </html>
