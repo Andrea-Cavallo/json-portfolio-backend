@@ -50,29 +50,38 @@
 <body>
     <div id="request-container">
         <input type="text" id="url" value="http://localhost:8080/users/AndreaCavallo" readonly>
-        <button id="send-button">Send</button>
+        <button id="send-button">GET</button>
       </div>
 
   <main class="container">
     <div id="json">
-        <div class="indent1">{<br><br>"<span class="key">Output</span>": {<div class="indent">
-        "<span class="key">Name</span>": "<span class="value">Andrea Cavallo</span>",</div><div class="indent">
-        "<span class="key">Description</span>": "<span class="value"><span id="typed"></span></span>",</div><div class="indent">
-        "<span class="key">CV</span>": "<a class="value" href="/cv.pdf" target="_self">cv.pdf</a>",</div><div class="indent">
-        "<span class="key">Skills</span>": [<div class="nested-indent">"<span class="value">Spring-Mvc</span>",</div><div class="nested-indent">"<span class="value">Spring-webflux</span>",</div><div class="nested-indent">"<span class="value">Java</span>",</div><div class="nested-indent">"<span class="value">Go</span>",</div><div class="nested-indent">"<span class="value">ApacheCamel</span>",</div><div class="nested-indent">"<span class="value">ApacheKafka</span>",</div><div class="nested-indent">"<span class="value">Eda</span>",</div><div class="nested-indent">"<span class="value">Microservices</span>",</div><div class="nested-indent">"<span class="value">CleanCode</span>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],</div><div class="indent">
-        "<span class="key">Experiences</span>": [<div class="nested-indent">"<span class="value">Poste Italiane</span>",</div><div class="nested-indent">"<span class="value">Enel</span>",</div><div class="nested-indent">"<span class="value">Inps</span>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],</div><div class="indent">
-        "<span class="key">Contact</span>": {<div class="nested-indent">"<span class="key">Email</span>": "<a class="value" href="mailto:a.cavallo@outlook.it" target="_self">a.cavallo@outlook.it</a>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</div><div class="indent">
-        "<span class="key">Source</span>": "<a class="value" href="https://github.com/Andrea-Cavallo" target="_self">https://github.com/Andrea-Cavallo</a>",</div><div class="indent">
-        "<span class="key">Profiles</span>": [<div class="nested-indent">"<a class="value" href="https://www.threads.net/@2wes.wav" target="_self">Threads</a>",</div><div class="nested-indent">"<a class="value" href="https://www.linkedin.com/in/cavalloandrea88/" target="_self">LinkedIn</a>",</div><div class="nested-indent">"<a class="value" href="https://stackoverflow.com/users/16351561/andreacavallo-class" target="_self">StackOverflow</a>",</div><div class="nested-indent">"<a class="value" href="https://medium.com/@andreacavallo" target="_self">Medium</a>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</div>
+        <div class="indent1">{<br><br>"<span class="key">output</span>": {<div class="indent">
+        "<span class="key">name</span>": "<span class="value">Andrea Cavallo</span>",</div><div class="indent">
+        "<span class="key">info</span>": "<span class="value"><span id="typed"></span></span>",</div><div class="indent">
+        "<span class="key">last-article</span>": "<a class="value" href="https://andreacavallo.medium.com/turbocharge-kafka-topic-production-with-gos-native-concurrency-1e3ed6a6b320" target="_self">turbocharge kafka topic production with go's native concurrency</a>",</div><div class="indent">
+        "<span class="key">CV</span>": "<a id="cv-link" class="value" href="#">get my CV</a>",</div><div class="indent">
+        "<span class="key">skills</span>": [<div class="nested-indent">"<span class="value">Spring-Mvc</span>",</div><div class="nested-indent">"<span class="value">Spring-webflux</span>",</div><div class="nested-indent">"<span class="value">Java</span>",</div><div class="nested-indent">"<span class="value">Go</span>",</div><div class="nested-indent">"<span class="value">ApacheCamel</span>",</div><div class="nested-indent">"<span class="value">ApacheKafka</span>",</div><div class="nested-indent">"<span class="value">Eda</span>",</div><div class="nested-indent">"<span class="value">Microservices</span>",</div><div class="nested-indent">"<span class="value">Clean-Code</span>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],</div><div class="indent">
+        "<span class="key">experiences</span>": [<div class="nested-indent">"<span class="value">Poste Italiane</span>",</div><div class="nested-indent">"<span class="value">Enel</span>",</div><div class="nested-indent">"<span class="value">Inps</span>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],</div><div class="indent">
+        "<span class="key">contact</span>": {<div class="nested-indent">"<span class="key">email</span>": "<a class="value" href="mailto:a.cavallo@outlook.it" target="_self">a.cavallo@outlook.it</a>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},</div><div class="indent">
+        "<span class="key">repositories</span>": "<a class="value" href="https://github.com/Andrea-Cavallo" target="_self">https://github.com/Andrea-Cavallo</a>",</div><div class="indent">
+        "<span class="key">links</span>": [<div class="nested-indent">"<a class="value" href="https://www.threads.net/@2wes.wav" target="_self">Threads</a>",</div><div class="nested-indent">"<a class="value" href="https://www.linkedin.com/in/cavalloandrea88/" target="_self">LinkedIn</a>",</div><div class="nested-indent">"<a class="value" href="https://stackoverflow.com/users/16351561/andreacavallo-class" target="_self">StackOverflow</a>",</div><div class="nested-indent">"<a class="value" href="https://medium.com/@andreacavallo" target="_self">Medium</a>"</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
         <br><br>}</div>
     </div>
 
     <div id="strings">
-        <span>Software Developer with a background in Mechanical Engineering.</span>
-        <span>Passion for Java, Microservices, and Integration Solutions.</span>
-        <span>Dedicated and results-oriented Software Developer.</span>
-      </div>
+      <span>Software Developer with a background in Mechanical Engineering.</span>
+      <span>Passion for Java, Microservices, and Integration Solutions.</span>
+      <span>Dedicated and results-oriented Software Developer.</span>
+      <span>Experience with Spring Boot, Apache Camel, and Apache Kafka.</span>
+      <span>Proficient in developing Microservices and Event-Driven Architectures.</span>
+      <span>Advocate of Clean Code and Software Craftsmanship.</span>
+      <span>Experienced in using Docker and Kubernetes for container orchestration.</span>
+      <span>Skilled in building scalable and resilient systems.</span>
+      <span>Enthusiastic about learning new technologies and staying updated with industry trends.</span>
+      <span>Proven track record of delivering high-quality software solutions.</span>
+      <span>Committed to continuous improvement and professional growth.</span>
+  </div>  
   </main>
 
   <script src="scripts/script.js"></script>
