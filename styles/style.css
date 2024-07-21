@@ -1,7 +1,7 @@
 body {
     background-color: #1e1e1e;
     color: #dcdcdc;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Hack', monospace;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -16,12 +16,13 @@ body {
     padding: 20px;
     background-color: #1e1e1e;
     border: 1px solid #3c3c3c;
-    border-radius: 8px;
-    overflow-x: auto;
+    border-radius: 22px;
+    overflow-x: none;
     display: none; /* Initially hidden */
   }
   
   #json {
+    padding: 50px;
     white-space: post;
     line-height: 1.0;
     font-size: 15px;
@@ -68,7 +69,6 @@ body {
   #strings span {
     display: none;
   }
-  
   #request-container {
     display: flex;
     flex-direction: column;
@@ -80,9 +80,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 600px;
-  }
-  
-  #url {
+}
+
+#url {
     width: 100%;
     padding: 12px;
     margin-bottom: 10px;
@@ -92,9 +92,9 @@ body {
     color: #dcdcdc;
     border: 1px solid #3c3c3c;
     border-radius: 4px;
-  }
-  
-  #send-button {
+}
+
+#send-button {
     padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
@@ -103,9 +103,47 @@ body {
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-  }
-  
-  #send-button:hover {
+}
+
+#send-button:hover {
     background-color: #417bb8;
-  }
-  
+}
+
+.hover-info {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hover-info .info-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posizionamento sopra l'elemento */
+    left: 50%;
+    margin-left: -100px; /* Centrare l'informazione */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hover-info .info-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Freccia sotto il tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.hover-info:hover .info-text {
+    visibility: visible;
+    opacity: 1;
+}
