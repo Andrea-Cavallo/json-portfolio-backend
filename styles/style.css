@@ -26,19 +26,19 @@ body {
     white-space: post;
     line-height: 1.0;
     font-size: 15px;
-    color: #dcdcdc;
+    color: #00ff00;
   }
   
   .key {
-    color: #9cdcfe;
+    color: #00ff00;
   }
   
   .value {
-    color: #ce9178;
+    color: #00ff00;
   }
   
   a.value {
-    color: #569cd6;
+    color: #00ff00;
     text-decoration: none;
   }
   
@@ -63,87 +63,106 @@ body {
   }
   
   #typed {
-    color: #ce9178;
+    color: #00ff00;
   }
   
   #strings span {
     display: none;
   }
-  #request-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 600px;
+/* Stile per il contenitore della richiesta */
+#request-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #1b1b1b;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  width: 80%;
+  max-width: 600px;
+  animation: fadeIn 1s ease-in-out;
 }
 
+/* Animazione di fade-in per il contenitore */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Stile per l'input URL */
 #url {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    background-color: #1e1e1e;
-    color: #dcdcdc;
-    border: 1px solid #3c3c3c;
-    border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  background-color: #2d2d2d;
+  color: #00ff00;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Stile per il pulsante di invio */
 #send-button {
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #569cd6;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #00ff00;
+  color: #1b1b1b;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
+/* Effetti hover per il pulsante di invio */
 #send-button:hover {
-    background-color: #417bb8;
+  background-color: #00cc00;
+  transform: scale(1.05);
 }
 
+/* Stile per l'elemento hover-info */
 .hover-info {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
+/* Stile per il tooltip */
 .hover-info .info-text {
-    visibility: hidden;
-    width: 200px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Posizionamento sopra l'elemento */
-    left: 50%;
-    margin-left: -100px; /* Centrare l'informazione */
-    opacity: 0;
-    transition: opacity 0.3s;
+  visibility: hidden;
+  width: 200px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
+/* Stile per la freccia del tooltip */
 .hover-info .info-text::after {
-    content: "";
-    position: absolute;
-    top: 100%; /* Freccia sotto il tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
 }
 
+/* Effetto hover per il tooltip */
 .hover-info:hover .info-text {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
